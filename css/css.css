@@ -29,7 +29,33 @@
 
 .site-head .topbar .center-warp ul li .has-menu{
     padding-right: 12px;
-    position: relative;
+    position: relative;;
+}
+
+.site-head .topbar .center-warp ul li .menu{
+    /* height: 300px; */
+    /* width: 300px; */
+    /* background-color: burlywood; */
+    position: absolute;
+    top:32px;
+    background-color: white;
+    z-index: 999;
+    display: none;
+}
+
+.site-head .topbar .center-warp ul li .menu > .menu-list{
+    width: 110px;
+    line-height: 20px;
+    height: 20px;
+}
+
+.site-head .topbar .center-warp ul li .menu > .menu-list a{
+    font-size: 14px;
+    color: #20BD9A;
+    padding-left: auto 2px;
+}
+.site-head .topbar .center-warp ul li.has-menu:hover > .menu{
+    display: block;
 }
 
 .site-head .topbar .center-warp ul li .has-menu .arrow{
@@ -118,6 +144,49 @@
     transition: transform 0.2s ease 0s;
 }
 
+.container nav ul li.have-menu .menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    padding: 10px;
+    display: none;
+}
+
+.container nav ul li.have-menu:hover .menu {
+    display: block;
+}
+
+.container nav ul li.have-menu div.jjzyx {
+    width: 150px;
+}
+
+.container nav ul li.have-menu div.gty {
+    width: 150px;
+}
+
+.container nav ul li.have-menu div.sdly {
+    width: 150px;
+}
+
+.container nav ul li.have-menu div.ddwl {
+    width: 150px;
+}
+
+.container nav ul li.have-menu .menu dl dt{
+    font-size: 16px;
+}
+.container nav ul li.have-menu .menu dl dd a{
+    color: #2a2a2a;
+    font-size: 12px;
+    line-height: 20px;
+    height: 10px;
+}
+
+.container nav ul li.have-menu .menu dl dd a:hover {
+    color: orange;
+}
 .header-con {
     margin-top: 13px;
 }
@@ -172,4 +241,9 @@
 
 .topbar-r span {
     margin-right: 10px;
+}
+
+body #banner img{
+    min-width: 1152px;
+    width: 100%;
 }
