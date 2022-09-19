@@ -243,7 +243,101 @@
     margin-right: 10px;
 }
 
-body #banner img{
+.banner {
+    position: relative;;
+}
+
+.banner img {
     min-width: 1152px;
     width: 100%;
+}
+
+.banner .center-warp {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1152px;
+    height: 100%;
+    margin-left: -576px;;
+    /* background-color: orange; */
+}
+
+.banner .center-warp .banner-nav {
+    height: 100%;
+    border: 1px solid rgb(45, 12, 235);
+}
+
+.banner .center-warp .banner-nav ul{
+    height: 16.66%;
+}
+
+.banner .center-warp .banner-nav ul li{
+    height: 100%;
+    width: 296px;
+    background-color: rgba(0, 0, 0, 0.43);
+    position: relative;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+}
+
+.banner .center-warp .banner-nav ul li dl{
+    position: absolute;
+    top: 50%;
+    left: 48px;
+    margin-top: -23px;
+    color: white;
+}
+
+.banner .center-warp .banner-nav ul li dl dd{
+    font-size: 18px;
+    line-height: 26px;
+    height: 26px;
+}
+
+.banner .center-warp .banner-nav ul li dl dt{
+    font-size: 16px;
+    line-height: 22px;
+    height: 22px;
+}
+
+.banner .center-warp .leftbutton {
+    position: absolute;
+    top: 50%;
+    left: -38px;    
+    width: 28px;
+    height: 44px;
+    background: url(../images/icons.png) no-repeat -21px -94px;;
+}
+
+.banner .center-warp .leftbutton:hover{
+    /* 透明度 */
+    opacity: 0.6;
+}
+
+.banner .center-warp .rightbutton:hover {
+    opacity: 0.6;
+}
+
+.banner .center-warp .rightbutton {
+    position: absolute;
+    top: 50%;
+    right: -38px;
+    width: 28px;
+    height: 44px;
+    background: url(../images/icons.png) no-repeat -21px -29px;
+}
+
+.banner .center-wrap .banner-nav ul li.hot::before {
+    width: 22px;
+    height: 18px;
+    background-position: -29px -399px; 
+    margin-top: -9px;
+}  
+
+.banner .center-wrap .banner-nav ul li::before {
+    content: '';
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 10px;
 }
