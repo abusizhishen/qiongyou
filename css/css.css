@@ -501,22 +501,122 @@ section.jjzyx nav ul li a:hover{
     color: #20BD9A;
 }
 
-section.jjzyx ul.imgbox li img{
-    float: left;
-    color: #20BD9A;
-    height: 270px;
-    width: 264px;
-    margin-right: 32px;    
-    margin-bottom: 32px;
-}
 
 section.jjzyx ul.imgbox{
     width: 1152px;
 }
 
-section.jjzyx ul.imgbox li:nth-child(3) img, section.jjzyx ul.imgbox li:nth-child(7) img{
+
+section.jjzyx ul.imgbox >li{
+    float: left;
+    margin-right: 32px;
+    margin-bottom: 32px;
+
+}
+section.jjzyx ul.imgbox li:first-child .picimg{
+    width: 560px;
+    height: 270px;
+}
+
+section.jjzyx ul.imgbox li:first-child .picimg img{
+    height: 270px;
+}
+
+section.jjzyx ul.imgbox li:first-child .picimg img .span-box span{
+    padding: auto;
+}
+
+section.jjzyx ul.imgbox li .picimg{
+    position: relative;
+    width: 264px;
+    height: 270px;
+    box-shadow: 10px 10px 9px #888888;
+}
+
+section.jjzyx ul.imgbox li .picimg img{
+    height: 184px;
+}
+
+section.jjzyx ul.imgbox li:nth-child(3),section.jjzyx ul.imgbox li:nth-child(7){
     margin-right: 0;
 }
-section.jjzyx ul.imgbox li:first-child img{
+
+
+
+section.jjzyx ul.imgbox li .picimg .span-box{
+    width: 264px;
+    height: au;
+    margin-top: 0;
+    /* background-color: rgba(0, 0, 0, 0.43); */
+    color: white;
+    padding: 14px;
+    box-sizing: border-box;
+}
+
+section.jjzyx ul.imgbox li .picimg .span-box span{
+    color: #1C1F21;
+    font-size: 14px;
+}
+
+section.jjzyx ul.imgbox li:nth-child(1) .picimg .span-box{
     width: 560px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.43);
+    color: rgb(248, 246, 246);
+    /* padding-left: 30px; */
+    box-sizing: border-box;
+    bottom: 0px;
+}
+
+section.jjzyx ul.imgbox li:last-child div {
+    float: left;
+    background-color: #20BD9A;
+    width: 264px;
+}
+
+.jjzyx-more {
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.jjzyx-more p {
+    margin: 0 auto;
+    color: #FFF;
+    text-align: center;
+    line-height: 24px;
+}
+
+.jjzyx-more ul.a-list{
+    /* margin: 0 auto; */
+    padding-left: 54px;
+    width: auto;
+    margin-top: 110px;
+
+}
+.jjzyx-more ul.a-list li{
+    float: left;
+    /* width: 37px; */
+    margin-right: 3px;
+    margin-bottom: 0;
+    font-size: 14px;
+    padding: 0 5px;
+    border-right: #FFF 1px solid;
+    line-height: 14px;
+}
+
+.jjzyx-more ul.a-list li:last-child{
+    border-right: none;
+}
+
+.jjzyx-more ul.a-list li a{
+    color: #FFF;
+}
+
+.jjzyx-more span {
+    font-size: 48px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -24px;
+    color: #FFF;
 }

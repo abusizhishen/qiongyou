@@ -7,36 +7,41 @@ a {
     text-decoration: none;
 }
 
-@font-face {
-    font-family: "iconfont";
-    /* Project id  */
-    src: url('../font/iconfont.ttf?t=1663260756157') format('truetype');
-}
-
-.iconfont {
-    font-family: "iconfont" !important;
-    font-size: 16px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-weibo:before {
-    content: "\e635";
-}
-
-.icon-qq:before {
-    content: "\e601";
-}
-
-.icon-fangdajing:before {
-    content: "\e60c";
-}
-
-.icon-weixin:before {
-    content: "\e8bb";
-}
 
 li {
     list-style-type: none;
 }
+
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('../font/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weibo:before {
+  content: "\e635";
+}
+
+.icon-qq:before {
+  content: "\e601";
+}
+
+.icon-fangdajing:before {
+  content: "\e60c";
+}
+
+.icon-weixin:before {
+  content: "\e8bb";
+}
+
+.icon-arrow-right-circle:before {
+  content: "\e665";
+}
+
