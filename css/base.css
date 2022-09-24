@@ -11,10 +11,9 @@ a {
 li {
     list-style-type: none;
 }
-
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('../font/iconfont.ttf') format('truetype');
+  src: url('../font/iconfont.ttf?t=1664035587073') format('truetype');
 }
 
 .iconfont {
@@ -25,12 +24,20 @@ li {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-xiai:before {
+  content: "\f0145";
+}
+
 .icon-weibo:before {
   content: "\e635";
 }
 
 .icon-qq:before {
   content: "\e601";
+}
+
+.icon-anquanbaozhang:before {
+  content: "\e88c";
 }
 
 .icon-fangdajing:before {
@@ -45,3 +52,6 @@ li {
   content: "\e665";
 }
 
+.icon-tiexinshouhu_huaban1:before {
+  content: "\e67a";
+}
