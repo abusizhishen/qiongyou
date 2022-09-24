@@ -845,16 +845,55 @@ section.jjzyx ul.imgbox li:last-child div {
     padding-top: 40px;
 }
 
+.sdlx ul li:first-child:hover .mask{
+    opacity: 1;
+    transition: opacity 0.5s ease 0s;
+}
+
+.sdlx ul li:first-child:hover .crycle{
+    top: 50%;
+    transition: top .3s ease 0s;
+}
+
+.sdlx ul li:first-child:hover .word{
+    bottom: 10px;
+    transition: bottom .3s ease 0s;
+} 
+
+.sdlx ul li:first-child .word{
+    position: absolute;
+    bottom: -40px;
+    margin: 0 auto;
+    color: #f7f7F1;
+    text-align: center;
+}
+
+.sdlx .center-wrap .mask{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+
 .sdlx .center-wrap ul li .crycle{
+    padding-top: 35px;
     position: absolute;
     width: 106px;
     height: 106px;
-    top: 50%;
+    top: -106px;
     left: 50%;
     margin-left: -53px;
     margin-top: -53px;
     border-radius: 50% 50% 50% 50% ;
     color: #f7f7F1;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+.sdlx .center-wrap ul li .crycle p{
+    text-align: center;
+    margin: auto;
 }
 
 .sdlx .center-wrap ul li:first-child{
@@ -876,10 +915,6 @@ section.jjzyx ul.imgbox li:last-child div {
     overflow: hidden;
 }
 
-.sdlx ul li:hover{
-    box-shadow: 0 8px 4px 0 rgba(0,0,0,0.5);
-}
-
 .sdlx ul li a img:hover{
     transform: scale(1.1);
     transition: transform .5s ease 0s;
@@ -898,3 +933,48 @@ section.jjzyx ul.imgbox li:last-child div {
     margin-right: 0px;
 }
 
+.sdlx .more {
+    background-color: #AA4DD9;
+}
+
+.sdlx .more>div {
+    color: #f7f7F1;
+    padding-top: 46px;
+    position: relative;
+}
+
+.sdlx .more p {
+    text-align: center;;
+}
+
+.sdlx .more .ul-box {
+    margin: 0 auto;
+    width: auto;
+}
+
+.sdlx .more .iconfont {
+    font-size: 46px;
+    display: block;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.sdlx .more ul {
+    margin-bottom: 30px;
+    margin-left: 60px;
+}
+.sdlx .more ul li {
+    float: left;
+    padding: 0 14px;
+    border-right: 1px solid white;
+    line-height: 100%;
+}
+
+.sdlx .more ul li:last-child {
+    border-right: none;
+}
+
+.sdlx .center-wrap > ul > li >a{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    /* background-color: #f7f7F1; */
+}
