@@ -1090,4 +1090,5 @@ footer a{
 
 .banner img {
     width: 1838px;
+    min-width: 1152px;
 }
