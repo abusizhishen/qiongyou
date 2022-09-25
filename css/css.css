@@ -248,11 +248,6 @@
     position: relative;;
 }
 
-.banner img {
-    min-width: 1152px;
-    width: 100%;
-}
-
 .banner .center-wrap {
     position: absolute;
     top: 0;
@@ -354,7 +349,7 @@
     height: 22px;
 }
 
-.banner .center-wrap .leftbutton {
+.banner .center-wrap #leftbutton {
     position: absolute;
     top: 50%;
     left: -38px;    
@@ -363,16 +358,16 @@
     background: url(../images/icons.png) no-repeat -21px -94px;;
 }
 
-.banner .center-wrap .leftbutton:hover{
+.banner .center-wrap #leftbutton:hover{
     /* 透明度 */
     opacity: 0.6;
 }
 
-.banner .center-wrap .rightbutton:hover {
+.banner .center-wrap #rightbutton:hover {
     opacity: 0.6;
 }
 
-.banner .center-wrap .rightbutton {
+.banner .center-wrap #rightbutton {
     position: absolute;
     top: 50%;
     right: -38px;
@@ -1074,4 +1069,25 @@ footer nav ul li {
 
 footer a{
     color: white;
+}
+
+.banner-box {
+    height: 565px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.banner-box ul {
+    position: absolute;
+    transition: left .3s ease 0s;
+    width: 100000px;
+}
+.banner-box ul li {
+    float: left;
+    /* width: 100%; */
+}
+
+.banner img {
+    width: 1838px;
 }
