@@ -76,4 +76,25 @@ window.onload = function () {
         ulele.style.transition = trans5s;
         ulele.style.transform = 'translateX(-' + idx * step + '%)';
     }
+
+    var totopEle = document.getElementsByClassName('totop')[0];
+    totopEle.onclick = function (ele) {
+        var totopinter = setInterval(function () {   
+            document.documentElement.scrollTop -= 200;
+            if (document.documentElement.scrollTop <= 0) {
+                clearInterval(totopinter);
+            }
+        },10)
+    }
+}
+
+window.onscroll = function (e) {    
+    var top = document.documentElement.scrollTop || window.scrollY;
+    var totopEle = document.getElementsByClassName('totop')[0];
+
+    if (top <= 10) {
+        totopEle.style.display = 'none'
+    }else{
+        totopEle.style.display = 'block'
+    }
 }

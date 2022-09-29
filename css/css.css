@@ -1119,3 +1119,18 @@ footer a{
     width: 100%;
     vertical-align: middle;
 }
+
+.totop{
+    height: 80px;
+    width: 80px;
+    background-color: #CCCCCC;
+    float: right;
+    bottom: 50%;
+    right: 80px;
+    position: fixed;
+    font-size: 21px;
+    text-align: center;
+    color: #000;
+    padding-top: 10px;
+    display: none;
+}
