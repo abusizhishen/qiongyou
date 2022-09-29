@@ -1,74 +1,79 @@
-window.onload = function(){
-    let leftbutton = document.getElementById("leftbutton");
-    let rightbutton = document.getElementById("rightbutton");
-    let ul = document.getElementById("banner-ul");
-    ul.appendChild(ul.firstChild.cloneNode(true))
+window.onload = function () {
+    var leftbutton = document.getElementById("leftbutton");
+    var rightbutton = document.getElementById("rightbutton");
+    var ulele = document.getElementById("banner-ul");
+    var li_clone = ulele.firstElementChild.cloneNode(true);
+    ulele.appendChild(li_clone);
 
+    var trans5s = 'transform .5s ease 0s';
+    var left = 0;
+    var step = 16.67;
+    var childrenLength = ulele.children.length;
+    var idx = 0
 
-    let left = 0;
-    let step = 16.667
-    let childrenLength = ul.children.length;
-    let idx = 0
-    var translateX = function(ele,percent) {
-        ele.style.transform = 'translateX(' + percent + '%)';
-    }
     leftbutton.onclick = function () {
-        if (idx == 0){
-            ul.style.transition = 'none';
-            idx = childrenLength-1
-            left = -idx*step;
-            translateX(ul,left)
+        if (idx == 0) {
+            ulele.style.transition = 'none';
+            idx = childrenLength - 1
+            left = idx * step;
+            ulele.style.transform = 'translateX(-' + left + '%)';
 
-            setTimeout(() => {
-                ul.style.transition = 'transition: transform .5s ease 0s';
+            setTimeout(function () {
+                ulele.style.transition = trans5s;
                 idx--;
-                left = -idx*step;
-                translateX(ul,left)
-            },0)
-        }else{
-            ul.style.transition = 'transition: transform .5s ease 0s';
+                left = idx * step;
+                ulele.style.transform = 'translateX(-' + left + '%)';
+            }, 0)
+        } else {
+            ulele.style.transition = trans5s;
             idx--;
-            left = -idx*step;
-            translateX(ul,left)
+            left = idx * step;
+            ulele.style.transform = 'translateX(-' + left + '%)';
         }
-        
-        
+
         console.log(idx);
         setCrycle(idx);
-
     }
 
     rightbutton.onclick = function () {
-        ul.style.transition = 'transition: transform .5s ease 0s';
+        ulele.style.transition = trans5s;
         idx++;
-        left = -idx*step;
-        translateX(ul,left);
+        left = idx * step;
+        ulele.style.transform = 'translateX(-' + left + '%)';
         setCrycle(idx);
-        if (idx >= childrenLength-1){
-            setTimeout(() => {
-                ul.style.transition = 'none';
-                ul.style.transform = "none";
+        if (idx >= childrenLength - 1) {
+            setTimeout(function () {
+                ulele.style.transition = 'none';
+                ulele.style.transform = 'none';
                 idx = 0;
-                // translateX(ul,0);
             }, 500);
         }
         console.log(idx);
-        
+
     };
 
-    let crycleUl = document.getElementById('little-cryclr');
-    let setCrycle = function(idx){
-        idx %=5
+    var crycleUl = document.getElementById('little-cryclr');
+    var setCrycle = function (idx) {
+        idx %= (childrenLength - 1)
         var children = crycleUl.children;
-        for (i=0;i<children.length;i++){
-            if (i!= idx){
+        for (i = 0; i < children.length; i++) {
+            if (i != idx) {
                 // console.log('idx', idx)
                 children[i].className = '';
-            }else{
+            } else {
                 children[i].className = 'active';
             }
         }
     };
 
     setCrycle(idx)
+
+    var crycle = document.getElementById('little-cryclr');
+    crycle.onclick = function (ele) {
+        idx = Array.from(crycleUl.children).indexOf(ele.target);
+        console.log(idx);
+        setCrycle(idx);
+        ulele.style.transition = trans5s;
+        ulele.style.transform = 'translateX(-' + idx * step + '%)';
+    }
 }

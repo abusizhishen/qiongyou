@@ -405,7 +405,6 @@
 .banner .center-wrap  #little-cryclr{
     position: absolute;
     bottom: 3%;
-    width: 210px;
     height: 25px;
     left: 50%;
     margin-left: -105px;
@@ -904,7 +903,6 @@ section.jjzyx ul.imgbox li:last-child div {
 .sdlx .center-wrap ul li .crycle{
     padding-top: 35px;
     position: absolute;
-    width: 106px;
     height: 106px;
     top: -106px;
     left: 50%;
@@ -1119,5 +1117,5 @@ footer a{
 
 .banner img {
     width: 100%;
-    vertical-align: middle;;
+    vertical-align: middle;
 }
