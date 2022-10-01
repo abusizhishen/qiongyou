@@ -68,21 +68,15 @@ window.onload = function () {
     var setCrycle = function (idx) {
         idx %= (childrenLength - 1)
         var children = crycleUl.children;
-        for (i = 0; i < children.length; i++) {
-            if (i != idx) {
-                // console.log('idx', idx)
-                children[i].className = '';
-            } else {
-                children[i].className = 'active';
-            }
-        }
+        [...crycleUl.children].forEach((child) => { child.className = ''; });
+        children[idx].className = 'active';  
     };
 
     setCrycle(idx)
 
     var crycle = document.getElementById('little-cryclr');
     crycle.onclick = function (ele) {
-        idx = Array.from(crycleUl.children).indexOf(ele.target);
+        idx = [...crycleUl.children].indexOf(ele.target);
         console.log(idx);
         setCrycle(idx);
         ulele.style.transition = trans5s;
@@ -130,22 +124,15 @@ window.onload = function () {
             target = target.closest("li");
         }
 
-        var idx = Array.from(target.parentNode.children).indexOf(target);
+        var idx = [...target.parentNode.children].indexOf(target);
         console.log(idx);
 
-        for (let i=0;i<menu_box.children.length;i++){
-            if (idx == i) {
-                menu_box.children[i].style.display = "block";
-            }else{
-                menu_box.children[i].style.display = "none";
-            }
-        }
+        [...menu_box.children].forEach((x)=>{x.style.display = "none"})
+        menu_box.children[idx].style.display = "block";
     };
 
     bannerNav.onmouseleave = function(ele){
-        for (let child of menu_box.children) {
-            child.style.display = "none";
-        }
+        [...menu_box.children].forEach((x)=>{x.style.display = "none"});
         menu_box.style.display = "none"
     }
 }

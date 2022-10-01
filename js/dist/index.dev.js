@@ -1,5 +1,13 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 window.onload = function () {
   var leftbutton = document.getElementById("leftbutton");
   var rightbutton = document.getElementById("rightbutton");
@@ -73,21 +81,18 @@ window.onload = function () {
     idx %= childrenLength - 1;
     var children = crycleUl.children;
 
-    for (i = 0; i < children.length; i++) {
-      if (i != idx) {
-        // console.log('idx', idx)
-        children[i].className = '';
-      } else {
-        children[i].className = 'active';
-      }
-    }
+    _toConsumableArray(crycleUl.children).forEach(function (child) {
+      child.className = '';
+    });
+
+    children[idx].className = 'active';
   };
 
   setCrycle(idx);
   var crycle = document.getElementById('little-cryclr');
 
   crycle.onclick = function (ele) {
-    idx = Array.from(crycleUl.children).indexOf(ele.target);
+    idx = _toConsumableArray(crycleUl.children).indexOf(ele.target);
     console.log(idx);
     setCrycle(idx);
     ulele.style.transition = trans5s;
@@ -139,42 +144,21 @@ window.onload = function () {
       target = target.closest("li");
     }
 
-    var idx = Array.from(target.parentNode.children).indexOf(target);
+    var idx = _toConsumableArray(target.parentNode.children).indexOf(target);
+
     console.log(idx);
 
-    for (var _i = 0; _i < menu_box.children.length; _i++) {
-      if (idx == _i) {
-        menu_box.children[_i].style.display = "block";
-      } else {
-        menu_box.children[_i].style.display = "none";
-      }
-    }
+    _toConsumableArray(menu_box.children).forEach(function (x) {
+      x.style.display = "none";
+    });
+
+    menu_box.children[idx].style.display = "block";
   };
 
   bannerNav.onmouseleave = function (ele) {
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-      for (var _iterator = menu_box.children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var child = _step.value;
-        child.style.display = "none";
-      }
-    } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-          _iterator["return"]();
-        }
-      } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
-        }
-      }
-    }
+    _toConsumableArray(menu_box.children).forEach(function (x) {
+      x.style.display = "none";
+    });
 
     menu_box.style.display = "none";
   };
