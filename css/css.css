@@ -53,7 +53,6 @@
 .site-head .topbar .center-wrap ul li .menu > .menu-list a{
     font-size: 14px;
     color: #20BD9A;
-    padding-left: auto 2px;
 }
 .site-head .topbar .center-wrap ul li.has-menu:hover > .menu{
     display: block;
@@ -541,10 +540,6 @@ section.jjzyx ul.imgbox li:first-child .picimg img{
     height: 270px;
 }
 
-section.jjzyx ul.imgbox li:first-child .picimg img .span-box span{
-    padding: auto;
-}
-
 section.jjzyx ul.imgbox li .picimg{
     position: relative;
     width: 264px;
@@ -564,7 +559,6 @@ section.jjzyx ul.imgbox li:nth-child(3),section.jjzyx ul.imgbox li:nth-child(7){
 
 section.jjzyx ul.imgbox li .picimg .span-box{
     width: 264px;
-    height: au;
     margin-top: 0;
     /* background-color: rgba(0, 0, 0, 0.43); */
     color: white;
@@ -1105,10 +1099,7 @@ footer a{
     position: absolute;
     transition: transform .5s ease 0s;
     width: 600%;
-}
-.banner-box ul li {
-    float: left;
-    width: 16.667%;
+    display: flex;
 }
 
 .banner img {
